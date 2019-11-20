@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'ITC Serif Gothic Std';
-    src: url(/assets/fonts/SerifGothicStd.otf);
+    src: url(../fonts/SerifGothicStd.otf);
 }
 
 @font-face {
     font-family: 'Aurebesh';
-    src: url(/assets/fonts/AurebeshINV.otf);
+    src: url(../fonts/AurebeshINV.otf);
 }
 
 body {
