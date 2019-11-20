@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="author" content="Tiemen" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#FFE81F" />
+    <meta name="keywords" content="star wars, aurebesh, translator, aurebesh translator, translate aurebesh, aurebesh language, star wars language, star wars translator" />
+    <meta name="title" content="Aurebesh Translator" />
+    <meta name="description" content="Aurebesh Translator with on-screen keyboard and mobile support." />
+
+    <meta property="og:title" content="Aurebesh Translator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Aurebesh Translator with on-screen keyboard and mobile support." />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@ThaTiemsz" />
+    <meta property="twitter:title" content="Aurebesh Translator" />
+    <meta property="twitter:description" content="Aurebesh Translator with on-screen keyboard and mobile support." />
+
+    <title>Aurebesh Translator</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aurebesh Translator</h1>
+        <p>Translate text into Aurebesh by typing in either text areas or by using the on-screen keyboard.</p>
+
+        <div class="simple-keyboard" style="display: none;"></div>
+
+        <div class="translateArea">
+            <div class="translateEnglish">
+                <h2>
+                    English
+                    <i class="fas fa-keyboard"></i>
+                </h2>
+                <textarea name="english" id="english" placeholder="Type your text here..."></textarea>
+            </div>
+
+            <div class="translateAurebesh">
+                <h2>Aurebesh</h2>
+                <textarea name="aurebesh" id="aurebesh" placeholder="Type your Aurebesh here..."></textarea>
+            </div>
+        </div>
+
+        <img src="./assets/img/Aurebesh-GMSR-dark.png" alt="Aurebesh" />
+
+        <div class="socials">
+            <a href="https://twitter.com/ThaTiemsz" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/ThaTiemsz" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>
