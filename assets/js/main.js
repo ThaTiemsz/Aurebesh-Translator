@@ -145,6 +145,8 @@ function main() {
 
     const inputField = document.querySelector("textarea#english")
     inputField.addEventListener("input", event => {
+        if (event.isComposing || event.keyCode === 229)
+            return
         keyboard.setInput(event.target.value)
     })
 

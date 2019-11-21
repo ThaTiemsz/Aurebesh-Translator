@@ -11,3 +11,4 @@ This website has been tested on:
 - macOS Mojave 10.14.6, Safari 12.1.2
 - macOS Mojave 10.14.6, Google Chrome 78
 - iPhone XS, iOS 13.3, Safari 13.3
+- iPhone XS, iOS 13.3, Google Chrome 78
