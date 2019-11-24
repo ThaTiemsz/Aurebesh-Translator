@@ -67,6 +67,7 @@ img#aurebesh-reference {
 
 .translateArea h2 {
     margin-left: 8px;
+    padding-top: 4px;
     padding-bottom: 4px;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -257,7 +258,7 @@ img#aurebesh-reference {
         --text-color: rgba(0, 0, 0, .92);
         --textarea-color: rgba(0, 0, 0, .92);
         --text-emphasis-color: #000000;
-        --text-active-color: #1c4995;
+        --text-active-color: #92b0e4;
         --border-color: rgba(6, 6, 7, 0.1);
     }
 }
