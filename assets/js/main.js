@@ -206,7 +206,7 @@ function main() {
      */
     const copyLink = document.querySelector("button.copyLink")
     copyLink.addEventListener("click", event => {
-        const link = new URL(window.location.origin)
+        const link = new URL(location.origin + location.pathname)
         const params = new URLSearchParams()
 
         if (document.querySelector(".simple-keyboard").classList.contains("active"))
