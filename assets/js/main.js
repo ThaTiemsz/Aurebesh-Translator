@@ -202,6 +202,40 @@ function main() {
     }
 
     /**
+     * Copy Link button
+     */
+    const copyLink = document.querySelector("button.copyLink")
+    copyLink.addEventListener("click", event => {
+        const link = new URL(window.location.origin)
+        const params = new URLSearchParams()
+
+        if (document.querySelector(".simple-keyboard").classList.contains("active"))
+            params.set("keyboard", true)
+        params.set("text", english.value)
+
+        link.search = params
+
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(link.toString()).then(async() => {
+                console.log("Copy success", await navigator.clipboard.readText())
+            }, () => console.log("Copy failed"))
+        } else {
+            const copyText = document.createElement("input")
+            try {
+                copyText.style = "width: 1px; overflow: hidden; height: 1px; border: 0px"
+                copyText.value = link.toString()
+                document.body.append(copyText)
+                copyText.focus()
+                copyText.select()
+                copyText.setSelectionRange(0, 99999)
+                document.execCommand("copy")
+            } finally {
+                copyText.remove()
+            }
+        }
+    })
+
+    /**
      * Aurebesh reference match color scheme
      */
     const darkTheme = window.matchMedia('(prefers-color-scheme: dark)')

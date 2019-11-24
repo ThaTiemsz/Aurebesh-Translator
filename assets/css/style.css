@@ -114,6 +114,26 @@ img#aurebesh-reference {
     color: var(--text-active-color);
 }
 
+button.copyLink {
+    background-color: var(--secondary-background-color);
+    border: 3px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+    outline: none;
+    margin-top: -40px;
+    padding: 8px;
+    align-self: center;
+}
+
+button.copyLink:hover {
+    background-color: var(--text-active-color);
+}
+
+.copyLink i {
+    padding-left: 2px;
+}
+
 /* On-screen keyboard */
 .simple-keyboard.dark {
     background-color: var(--secondary-background-color);
@@ -195,7 +215,7 @@ img#aurebesh-reference {
 /* Subtitles (source: https://cssanimation.rocks/starwars/) */
 .subtitle {
     font-weight: bold;
-    font-size: 2.25em;
+    font-size: 2em;
     color: var(--text-emphasis-color);
     line-height: 2em;
     letter-spacing: 0.4em;
@@ -269,11 +289,15 @@ img#aurebesh-reference {
         width: 100%;
         height: 60%;
     }
+    button.copyLink {
+        margin-top: 12vh;
+        z-index:999999999999999;
+    }
     img#aurebesh-reference {
         align-self: center;
         height: 60vw;
         justify-content: flex-end;
-        margin-top: 20vh;
+        margin-top: 5vh;
     }
     .simple-keyboard.dark {
         font-size: 4vw;
