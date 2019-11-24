@@ -93,6 +93,7 @@ function main() {
         }]
     })
 
+    // Change keyboard layout on mobile
     const mediaQuery = window.matchMedia("(max-width: 767px)")
     function mobileKeyboard(e) {
         if (e.matches) {
@@ -197,4 +198,14 @@ function main() {
         // console.log("Previous layout", prevLayout)
         // console.log("New layout", newLayout)
     }
+
+    /**
+     * Aurebesh reference match color scheme
+     */
+    const darkTheme = window.matchMedia('(prefers-color-scheme: dark)')
+    function referenceMatchColorScheme({ matches }) {
+        document.querySelector("img#aurebesh-reference").src = `./assets/img/Aurebesh-GMSR${matches ? "-dark" : ""}.png`;
+    }
+    referenceMatchColorScheme(darkTheme)
+    darkTheme.addListener(referenceMatchColorScheme)
 }

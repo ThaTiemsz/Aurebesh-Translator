@@ -8,9 +8,19 @@
     src: url(../fonts/AurebeshINV.otf);
 }
 
+:root {
+    --background-color: #111111;
+    --secondary-background-color: #1d1d1d;
+    --text-color: rgba(255, 255, 255, .92);
+    --textarea-color: rgba(255, 255, 255, .92);
+    --text-emphasis-color: #ffffff;
+    --text-active-color: #1c4995;
+    --border-color: #101010;
+}
+
 body {
-    background: #111111;
-    color: rgba(255, 255, 255, .92);
+    background: var(--background-color);
+    color: var(--text-color);
     font-family: 'ITC Serif Gothic Std', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
 }
@@ -25,11 +35,11 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    color: #fff;
+    color: var(--text-emphasis-color);
     margin-bottom: .1rem;
 }
 
-img {
+img#aurebesh-reference {
     align-self: center;
     height: 50vh;
     margin-top: 1em;
@@ -41,7 +51,7 @@ img {
 }
 
 .socials a {
-    color: #fff;
+    color: var(--text-emphasis-color);
     font-size: 2em;
     padding: 7px;
     text-decoration: none;
@@ -60,10 +70,10 @@ img {
 }
 
 .translateArea textarea {
-    background: #1d1d1d;
-    border: 3px solid #101010;
+    background: var(--secondary-background-color);
+    border: 3px solid var(--border-color);
     border-radius: 5px;
-    color: rgba(255, 255, 255, .87);
+    color: var(--textarea-color);
     font-family: 'ITC Serif Gothic Std', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 36px;
     padding: 10px;
@@ -89,19 +99,19 @@ img {
 
 .translateArea .fa-keyboard {
     margin-left: .2em;
-    color: rgba(255, 255, 255, .92);
+    color: var(--text-color);
     cursor: pointer;
     font-size: 26px;
 }
 
 .translateArea .fa-keyboard.active {
-    color: #1c4995;
+    color: var(--text-active-color);
 }
 
 /* On-screen keyboard */
 .simple-keyboard.dark {
-    background-color: #1d1d1d;
-    border: 2px solid #101010;
+    background-color: var(--secondary-background-color);
+    border: 2px solid var(--border-color);
     border-radius: 0;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -132,15 +142,15 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #111111;
-    color: white;
-    box-shadow: 0 0 3px -1px #101010;
-    border-bottom: 1px solid #101010;
+    background: var(--background-color);
+    color: var(--text-emphasis-color);
+    box-shadow: 0 0 3px -1px var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .simple-keyboard.dark .hg-button:active {
-    background: #1c4995;
-    color: white;
+    background: var(--text-active-color);
+    color: var(--text-emphasis-color);
 }
 
 .simple-keyboard .hg-button.hg-standardBtn.letter {
@@ -240,8 +250,13 @@ img {
 
 /* Blind theme */
 @media (prefers-color-scheme: light) {
-    body {
-        background: white;
-        color: white;
+    :root {
+        --background-color: #ffffff;
+        --secondary-background-color: #f2f3f5;
+        --text-color: rgba(0, 0, 0, .92);
+        --textarea-color: rgba(0, 0, 0, .92);
+        --text-emphasis-color: #000000;
+        --text-active-color: #1c4995;
+        --border-color: rgba(6, 6, 7, 0.1);
     }
 }
