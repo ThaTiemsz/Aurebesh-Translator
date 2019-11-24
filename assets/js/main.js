@@ -10,14 +10,16 @@ function main() {
     const english = document.querySelector("textarea#english")
     const aurebesh = document.querySelector("textarea#aurebesh")
 
-    if (params.has("english"))
-        english.value = aurebesh.value = params.get("english")
-
-    if (params.has("aurebesh"))
-        aurebesh.value = english.value = params.get("aurebesh")
+    if (params.has("text")) {
+        english.value = aurebesh.value = params.get("text")
+        if (english.value.toLowerCase() === "aurebesh" && !document.querySelector(".translateAurebesh i"))
+            aurebeshEasterEgg()
+    }
 
     english.addEventListener("keyup", (event) => {
         aurebesh.value = event.target.value
+        if (event.target.value.toLowerCase() === "aurebesh" && !document.querySelector(".translateAurebesh i"))
+            aurebeshEasterEgg()
     })
 
     aurebesh.addEventListener("keyup", (event) => {
@@ -208,4 +210,41 @@ function main() {
     }
     referenceMatchColorScheme(darkTheme)
     darkTheme.addListener(referenceMatchColorScheme)
+
+    /**
+     * Subtitle easter egg
+     */
+    document.querySelector("p i.fa-keyboard").addEventListener("dblclick", function cb(event) {
+        const p = document.createElement("p")
+        p.className = "subtitle"
+        let subtitles = ["THE FORCE AWAKENS", "THE LAST JEDI", "THE RISE OF SKYWALKER"]
+        subtitles = subtitles.map(text => text.split("").map(letter => letter === " " ? letter : `<span>${letter}</span>`).join(""))
+        console.log(subtitles)
+        p.innerHTML = subtitles.join("<br />")
+        document.querySelector(".container h1 ~ p").after(p)
+        this.removeEventListener("dblclick", cb)
+    })
+
+    /** 
+      * Aurebesh easter egg
+     */
+    function aurebeshEasterEgg() {
+        const i = document.createElement("i")
+        i.className = "fas fa-journal-whills"
+        document.querySelector(".translateAurebesh h2").append(i)
+
+        function toggleAurebeshText(element) {
+            const classes = element.classList
+            classes.toggle("active")
+            document.documentElement.style.setProperty(
+                "--font",
+                classes.contains("active")
+                    ? "Aurebesh"
+                    : "'ITC Serif Gothic Std', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+            )
+        }
+
+        const whillsIcon = document.querySelector(".translateArea i.fa-journal-whills")
+        whillsIcon.addEventListener("click", event => toggleAurebeshText(event.target))
+    }
 }

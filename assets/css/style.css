@@ -9,6 +9,8 @@
 }
 
 :root {
+    --font: 'ITC Serif Gothic Std', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-special: 'Aurebesh';
     --background-color: #111111;
     --secondary-background-color: #1d1d1d;
     --text-color: rgba(255, 255, 255, .92);
@@ -21,7 +23,7 @@
 body {
     background: var(--background-color);
     color: var(--text-color);
-    font-family: 'ITC Serif Gothic Std', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font);
     font-size: 16px;
 }
 
@@ -78,7 +80,7 @@ img#aurebesh-reference {
     border: 3px solid var(--border-color);
     border-radius: 5px;
     color: var(--textarea-color);
-    font-family: 'ITC Serif Gothic Std', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font);
     font-size: 36px;
     padding: 10px;
     outline: none;
@@ -97,18 +99,18 @@ img#aurebesh-reference {
 }
 
 .translateArea textarea[name=aurebesh] {
-    font-family: Aurebesh;
+    font-family: var(--font-special);
     /* width: 50%; */
 }
 
-.translateArea .fa-keyboard {
+.translateArea i {
     margin-left: .2em;
     color: var(--text-color);
     cursor: pointer;
-    font-size: 26px;
+    font-size: 24px;
 }
 
-.translateArea .fa-keyboard.active {
+.translateArea i.active {
     color: var(--text-active-color);
 }
 
@@ -117,7 +119,7 @@ img#aurebesh-reference {
     background-color: var(--secondary-background-color);
     border: 2px solid var(--border-color);
     border-radius: 5px;
-    font-family: Aurebesh;
+    font-family: var(--font-special);
     font-size: 34px;
     padding: 10px;
 }
@@ -178,7 +180,7 @@ img#aurebesh-reference {
 }
 
 .simple-keyboard.dark .hg-functionBtn {
-    font-family: 'ITC Serif Gothic Std', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font);
     font-size: 22px;
 }
 
@@ -188,6 +190,60 @@ img#aurebesh-reference {
 
 .simple-keyboard.hg-theme-default .hg-button.hg-functionBtn[data-skbtn="{double}"] {
     max-width: 100px;
+}
+
+/* Subtitles (source: https://cssanimation.rocks/starwars/) */
+.subtitle {
+    font-weight: bold;
+    font-size: 2.25em;
+    color: var(--text-emphasis-color);
+    line-height: 2em;
+    letter-spacing: 0.4em;
+    left: -2em;
+    right: -2em;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+    -webkit-animation: move-byline 10s linear infinite;
+    -moz-animation: move-byline 10s linear infinite;
+    animation: move-byline 10s linear infinite;
+}
+
+.subtitle span {
+    display: inline-block;
+    -webkit-animation: spin-letters 10s linear infinite;
+    -moz-animation: spin-letters 10s linear infinite;
+    animation: spin-letters 10s linear infinite;
+}
+
+@keyframes spin-letters {
+    0%, 10% {
+      opacity: 0;
+      -webkit-transform: rotateY(90deg);
+      -moz-transform: rotateY(90deg);
+      transform: rotateY(90deg);
+    }
+    30% {
+      opacity: 1;
+    }
+    70%, 86% {
+      -webkit-transform: rotateY(0);
+      -moz-transform: rotateY(0);
+      transform: rotateY(0);
+      opacity: 1;
+    }
+    95%, 100% {
+      opacity: 0;
+    }
+}
+
+@keyframes move-byline {
+    0% {
+      transform: translateZ(5em);
+    }
+    100% {
+      transform: translateZ(0);
+    }
 }
 
 /* Mobile */
