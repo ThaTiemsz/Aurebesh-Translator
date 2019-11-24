@@ -217,7 +217,7 @@ function main() {
 
         if (navigator.clipboard) {
             navigator.clipboard.writeText(link.toString()).then(async() => {
-                console.log("Copy success", await navigator.clipboard.readText())
+                console.log("Copy success")
             }, () => console.log("Copy failed"))
         } else {
             const copyText = document.createElement("input")
