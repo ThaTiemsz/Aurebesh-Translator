@@ -18,8 +18,6 @@ function main() {
 
     english.addEventListener("keyup", (event) => {
         aurebesh.value = event.target.value
-        if (event.target.value.toLowerCase() === "aurebesh" && !document.querySelector(".translateAurebesh i"))
-            aurebeshEasterEgg()
     })
 
     aurebesh.addEventListener("keyup", (event) => {
@@ -150,6 +148,8 @@ function main() {
     inputField.addEventListener("input", event => {
         if (event.isComposing || event.keyCode === 229)
             return
+        if (event.target.value.toLowerCase() === "aurebesh" && !document.querySelector(".translateAurebesh i"))
+            aurebeshEasterEgg()
         keyboard.setInput(event.target.value)
     })
 
