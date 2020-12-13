@@ -342,3 +342,62 @@ button.copyLink:hover {
         --border-color: rgba(6, 6, 7, 0.1);
     }
 }
+
+/* Small letters */
+.simple-keyboard .hg-button.hg-standardBtn.letter::after {
+    font-family: var(--font);
+    font-size: 20px;
+    margin: 0 0 18px 10px;
+}
+.hg-button.letter[data-skbtn=A]:after{content: 'A';}
+.hg-button.letter[data-skbtn=B]:after{content: 'B';}
+.hg-button.letter[data-skbtn=C]:after{content: 'C';}
+.hg-button.letter[data-skbtn=D]:after{content: 'D';}
+.hg-button.letter[data-skbtn=E]:after{content: 'E';}
+.hg-button.letter[data-skbtn=F]:after{content: 'F';}
+.hg-button.letter[data-skbtn=G]:after{content: 'G';}
+.hg-button.letter[data-skbtn=H]:after{content: 'H';}
+.hg-button.letter[data-skbtn=I]:after{content: 'I';}
+.hg-button.letter[data-skbtn=J]:after{content: 'J';}
+.hg-button.letter[data-skbtn=K]:after{content: 'K';}
+.hg-button.letter[data-skbtn=L]:after{content: 'L';}
+.hg-button.letter[data-skbtn=M]:after{content: 'M';}
+.hg-button.letter[data-skbtn=N]:after{content: 'N';}
+.hg-button.letter[data-skbtn=O]:after{content: 'O';}
+.hg-button.letter[data-skbtn=P]:after{content: 'P';}
+.hg-button.letter[data-skbtn=Q]:after{content: 'Q';}
+.hg-button.letter[data-skbtn=R]:after{content: 'R';}
+.hg-button.letter[data-skbtn=S]:after{content: 'S';}
+.hg-button.letter[data-skbtn=T]:after{content: 'T';}
+.hg-button.letter[data-skbtn=U]:after{content: 'U';}
+.hg-button.letter[data-skbtn=V]:after{content: 'V';}
+.hg-button.letter[data-skbtn=W]:after{content: 'W';}
+.hg-button.letter[data-skbtn=X]:after{content: 'X';}
+.hg-button.letter[data-skbtn=Y]:after{content: 'Y';}
+.hg-button.letter[data-skbtn=Z]:after{content: 'Z';}
+.hg-button.letter[data-skbtn=a]:after{content: 'a';}
+.hg-button.letter[data-skbtn=b]:after{content: 'b';}
+.hg-button.letter[data-skbtn=c]:after{content: 'c';}
+.hg-button.letter[data-skbtn=d]:after{content: 'd';}
+.hg-button.letter[data-skbtn=e]:after{content: 'e';}
+.hg-button.letter[data-skbtn=f]:after{content: 'f';}
+.hg-button.letter[data-skbtn=g]:after{content: 'g';}
+.hg-button.letter[data-skbtn=h]:after{content: 'h';}
+.hg-button.letter[data-skbtn=i]:after{content: 'i';}
+.hg-button.letter[data-skbtn=j]:after{content: 'j';}
+.hg-button.letter[data-skbtn=k]:after{content: 'k';}
+.hg-button.letter[data-skbtn=l]:after{content: 'l';}
+.hg-button.letter[data-skbtn=m]:after{content: 'm';}
+.hg-button.letter[data-skbtn=n]:after{content: 'n';}
+.hg-button.letter[data-skbtn=o]:after{content: 'o';}
+.hg-button.letter[data-skbtn=p]:after{content: 'p';}
+.hg-button.letter[data-skbtn=q]:after{content: 'q';}
+.hg-button.letter[data-skbtn=r]:after{content: 'r';}
+.hg-button.letter[data-skbtn=s]:after{content: 's';}
+.hg-button.letter[data-skbtn=t]:after{content: 't';}
+.hg-button.letter[data-skbtn=u]:after{content: 'u';}
+.hg-button.letter[data-skbtn=v]:after{content: 'v';}
+.hg-button.letter[data-skbtn=w]:after{content: 'w';}
+.hg-button.letter[data-skbtn=x]:after{content: 'x';}
+.hg-button.letter[data-skbtn=y]:after{content: 'y';}
+.hg-button.letter[data-skbtn=z]:after{content: 'z';}
